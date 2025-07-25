@@ -1,30 +1,45 @@
 {
   "pages": {
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
-    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/disclaimer/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/disclaimer/page.js"
+      "static/chunks/app/page.js"
+    ],
+    "/criminal-defense/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/criminal-defense/page.js"
+    ],
+    "/civil-rights/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/civil-rights/page.js"
+    ],
+    "/practice-areas/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/practice-areas/page.js"
+    ],
+    "/personal-injury/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/personal-injury/page.js"
     ],
     "/about/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/about/page.js"
     ],
-    "/practice-areas/page": [
+    "/schedule-consultation/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/practice-areas/page.js"
+      "static/chunks/app/schedule-consultation/page.js"
     ],
     "/results/page": [
       "static/chunks/webpack.js",
@@ -41,15 +56,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/blog/page.js"
     ],
-    "/blog/ambiguity-consent-search/page": [
+    "/loading": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/blog/ambiguity-consent-search/page.js"
-    ],
-    "/blog/fellatio-sexual-assault/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/blog/fellatio-sexual-assault/page.js"
+      "static/chunks/app/loading.js"
     ]
   }
 }

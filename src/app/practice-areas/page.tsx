@@ -9,7 +9,7 @@ const PracticeAreasPage = () => {
     <div className="min-h-screen bg-white">
       <Navigation />
 
-      <main className="pt-24">
+      <main className="pt-24 pb-16">
         {/* Hero Section */}
         <section className="bg-navy-900 text-white py-16">
           <div className="container-luxury text-center">

@@ -51,7 +51,7 @@ const BlogPost = () => {
               {/* Content */}
               <div className="prose prose-lg max-w-none">
                 <p className="text-luxury leading-relaxed mb-6">
-                  Upholding a district court's conviction of first-degree sexual
+                  Upholding a district court&apos;s conviction of first-degree sexual
                   assault, the Nebraska Supreme Court concluded that there was
                   sufficient evidence to support the sexual assault conviction
                   for a defendant who voluntarily performed fellatio on a
@@ -61,14 +61,14 @@ const BlogPost = () => {
 
                 <p className="text-luxury leading-relaxed mb-6">
                   In Garcia, a couple had been invited over to the home of their
-                  neighbor and co-worker. While at Garcia's home, after drinking
+                  neighbor and co-worker. While at Garcia&apos;s home, after drinking
                   beer and rum, as well as smoking some marijuana, the victim
                   indicated that he was tired and wanted to go home. The victim
                   eventually fell asleep while waiting for his girlfriend to
                   finish her conversation with Garcia. After she was
-                  unsuccessful in trying to wake him, the victim's girlfriend
+                  unsuccessful in trying to wake him, the victim&apos;s girlfriend
                   returned to her home and retrieved a blanket to wrap him in
-                  before leaving Garcia's home for the night. The victim woke up
+                  before leaving Garcia&apos;s home for the night. The victim woke up
                   hours later and shockingly realized he was completely naked,
                   and Garcia was performing fellatio on him. Upset, the victim
                   grabbed his clothes, dressed, and went home. Upon informing
@@ -79,10 +79,10 @@ const BlogPost = () => {
                 </p>
 
                 <p className="text-luxury leading-relaxed mb-6">
-                  As a result of the victim and Garcia's statements, Garcia was
+                  As a result of the victim and Garcia&apos;s statements, Garcia was
                   charged with first degree sexual assault. The district court
                   found Garcia guilty of sexual assault and sentenced him to 2
-                  to 4 years' imprisonment. Upon appealing his conviction to the
+                  to 4 years&apos; imprisonment. Upon appealing his conviction to the
                   appellate court, the Nebraska Supreme Court upheld his
                   conviction of first-degree sexual assault.
                 </p>
@@ -92,20 +92,20 @@ const BlogPost = () => {
                   defined in the statute explicitly included fellatio, and
                   therefore Garcia had indeed admitted engaging in sexual
                   penetration. Specifically, the court had previously defined
-                  fellatio as, "the practice of obtaining sexual satisfaction by
-                  oral stimulation of the penis." Moreover, the fact that the
+                  fellatio as, &ldquo;the practice of obtaining sexual satisfaction by
+                  oral stimulation of the penis.&rdquo; Moreover, the fact that the
                   victim testified that he did not consent to the fellatio by
                   Garcia, he was asleep and did not awake until he ejaculated,
                   realized it was Garcia who was fellating him, and objected and
-                  left Garcia's home, was sufficient evidence to support that
+                  left Garcia&apos;s home, was sufficient evidence to support that
                   the fellatio was nonconsensual.
                 </p>
 
                 <p className="text-luxury leading-relaxed mb-6">
                   Additionally, there was sufficient evidence that Garcia knew
                   or should have known the victim was not in a position to
-                  comprehend the nature of Garcia's conduct based on the
-                  victim's testimony that he was drinking alcohol, smoked
+                  comprehend the nature of Garcia&apos;s conduct based on the
+                  victim&apos;s testimony that he was drinking alcohol, smoked
                   marijuana, fell asleep to the point that he could not be woke,
                   as well as that he urinated on himself, removed his clothing,
                   and switched locations from one couch to another, all without
@@ -122,9 +122,9 @@ const BlogPost = () => {
                     only the act of a victim being forced to perform fellatio
                     upon a defendant. Under Nebraska law, a person commits first
                     degree sexual assault by voluntarily performing fellatio on
-                    a victim without the victim's consent, and knowing or should
+                    a victim without the victim&apos;s consent, and knowing or should
                     have known that the victim was in no position to appraise
-                    the nature of the defendant's conduct.
+                    the nature of the defendant&apos;s conduct.
                   </p>
                 </div>
 

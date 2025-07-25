@@ -86,7 +86,7 @@ const PracticeAreas = () => {
   const [selectedArea, setSelectedArea] = useState<string | null>(null);
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
   const sectionRef = useGSAPAnimation();
-  const cardsRef = useGSAPStagger(0.15);
+  const cardsRef = useGSAPStagger(0.08);
 
   return (
     <section id="practice" className="section-padding bg-marble-50">
@@ -120,9 +120,15 @@ const PracticeAreas = () => {
               )}
               onMouseEnter={() => setHoveredCard(area.id)}
               onMouseLeave={() => setHoveredCard(null)}
-              onClick={() =>
-                setSelectedArea(selectedArea === area.id ? null : area.id)
-              }
+              onClick={() => {
+                if (selectedArea === area.id) {
+                  // If already selected, navigate to detail page
+                  window.location.href = `/${area.id}`;
+                } else {
+                  // Otherwise, show detailed view
+                  setSelectedArea(area.id);
+                }
+              }}
             >
               <div className="card-luxury h-full min-h-[320px] relative overflow-hidden">
                 {/* Background Pattern */}
@@ -169,9 +175,18 @@ const PracticeAreas = () => {
                     )}
                   </div>
 
-                  {/* Hover Indicator */}
-                  <div className="absolute bottom-4 right-4 text-gold-500 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span className="text-sm font-medium">Learn More →</span>
+                  {/* Learn More Button */}
+                  <div className="mt-6 pt-4 border-t border-gray-200">
+                    <a
+                      href={`/${area.id}`}
+                      className="inline-flex items-center text-gold-600 hover:text-gold-700 font-medium text-sm transition-colors"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      Learn More
+                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -206,8 +221,8 @@ const PracticeAreas = () => {
                     <p className="text-luxury mb-8">{area.description}</p>
 
                     <div className="flex gap-4">
-                      <a href="#contact" className="btn-primary">
-                        Get Consultation
+                      <a href={`/${area.id}`} className="btn-primary">
+                        Learn More
                       </a>
                       <button
                         onClick={() => setSelectedArea(null)}
@@ -281,7 +296,7 @@ const PracticeAreas = () => {
               how our experience can help you achieve the best possible outcome.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#contact" className="btn-primary">
+              <a href="/schedule-consultation" className="btn-primary">
                 Schedule Free Consultation
               </a>
               <a

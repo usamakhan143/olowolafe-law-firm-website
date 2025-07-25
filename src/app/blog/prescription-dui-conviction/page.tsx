@@ -50,7 +50,7 @@ const BlogPost = () => {
               {/* Content */}
               <div className="prose prose-lg max-w-none">
                 <p className="text-luxury leading-relaxed mb-6">
-                  Upholding a county court's conviction of driving under the
+                  Upholding a county court&apos;s conviction of driving under the
                   influence of drugs, the Nebraska Supreme Court found there was
                   sufficient evidence to support a DUI conviction for a person
                   driving under the influence of prescription medications. State
@@ -75,8 +75,8 @@ const BlogPost = () => {
                   overtired, and not completely aware of what was going on, the
                   police officers conducted field sobriety tests to determine if
                   the driver was impaired. Although there was no smell of
-                  alcohol on the driver's breath, and a preliminary breath test
-                  did not detect any alcohol on the driver's breath, the
+                  alcohol on the driver&apos;s breath, and a preliminary breath test
+                  did not detect any alcohol on the driver&apos;s breath, the
                   officers detained the driver to be evaluated by a drug
                   recognition expert. After receiving his Miranda rights and
                   agreeing to be interviewed, the driver again acknowledged
@@ -85,16 +85,16 @@ const BlogPost = () => {
                 </p>
 
                 <p className="text-luxury leading-relaxed mb-6">
-                  As a result of the driver's statement, the performance on
+                  As a result of the driver&apos;s statement, the performance on
                   field sobriety tests, and the multistep drug recognition
                   expert protocol, the driver was cited for violating driving
                   under the influence under Lincoln Mun. Code § 10.16.030
                   (2017). The county court found the driver guilty of unlawfully
                   operating a motor vehicle under the influence of any drug and
                   passed sentence. The district court affirmed the county
-                  court's findings that there was sufficient evidence for the
+                  court&apos;s findings that there was sufficient evidence for the
                   conviction. Upon appealing to the appellate court, the
-                  Nebraska Supreme Court upheld the driver's conviction of
+                  Nebraska Supreme Court upheld the driver&apos;s conviction of
                   driving under the influence of any drug.
                 </p>
 
@@ -109,7 +109,7 @@ const BlogPost = () => {
                   Furthermore, driving at night with headlights off, crossing
                   the centerline of the road, striking a curb, and admitting to
                   falling asleep while driving was sufficient evidence to
-                  demonstrate the driver's ability to drive safely was impaired
+                  demonstrate the driver&apos;s ability to drive safely was impaired
                   as a result of prescription medications.
                 </p>
 

@@ -41,13 +41,13 @@ const DisclaimerPage = () => {
                   practice does not mean that a lawyer is a specialist or expert
                   in a field of law, nor does it mean that such lawyer is
                   necessarily any more expert or competent than any other
-                  lawyer. Every case and every client's situation is different
+                  lawyer. Every case and every client&apos;s situation is different
                   and this site is merely meant to provide information to the
                   public. If you have a legal question, contact a lawyer for
                   advice tailored to your specific situation. The law is
                   constantly changing. Nothing on this website should be
                   construed as a guarantee, warranty, or prediction as to how
-                  any individual's legal situation may play out in court or
+                  any individual&apos;s legal situation may play out in court or
                   arbitration. All potential clients are urged to make their own
                   independent investigation and evaluation of any lawyer being
                   considered.

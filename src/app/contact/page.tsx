@@ -9,13 +9,13 @@ const ContactPage = () => {
     <div className="min-h-screen bg-white">
       <Navigation />
 
-      <main className="pt-24">
+      <main className="pt-24 pb-16">
         {/* Hero Section */}
         <section className="bg-navy-900 text-white py-16">
           <div className="container-luxury text-center">
             <h1 className="heading-primary text-white mb-6">Contact Us</h1>
             <p className="text-luxury text-white/80 max-w-3xl mx-auto">
-              Get your free consultation today. We're here to help with your
+              Get your free consultation today. We&apos;re here to help with your
               legal needs throughout Nebraska and Iowa.
             </p>
           </div>

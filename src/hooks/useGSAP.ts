@@ -10,31 +10,31 @@ if (typeof window !== "undefined") {
 }
 
 export const useGSAPAnimation = () => {
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!ref.current) return;
 
     const element = ref.current;
     const ctx = gsap.context(() => {
-      // Fade in from bottom animation
+      // Faster fade in from bottom animation
       gsap.fromTo(
         element,
         {
           opacity: 0,
-          y: 50,
-          scale: 0.95,
+          y: 30,
+          scale: 0.98,
         },
         {
           opacity: 1,
           y: 0,
           scale: 1,
-          duration: 1,
-          ease: "power3.out",
+          duration: 0.5,
+          ease: "power2.out",
           scrollTrigger: {
             trigger: element,
-            start: "top 85%",
-            end: "bottom 15%",
+            start: "top 90%",
+            end: "bottom 10%",
             toggleActions: "play none none reverse",
           },
         },
@@ -47,8 +47,8 @@ export const useGSAPAnimation = () => {
   return ref;
 };
 
-export const useGSAPStagger = (delay: number = 0.1) => {
-  const ref = useRef<HTMLElement>(null);
+export const useGSAPStagger = (delay: number = 0.05) => {
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!ref.current) return;
@@ -61,20 +61,20 @@ export const useGSAPStagger = (delay: number = 0.1) => {
         children,
         {
           opacity: 0,
-          y: 30,
-          scale: 0.9,
+          y: 20,
+          scale: 0.95,
         },
         {
           opacity: 1,
           y: 0,
           scale: 1,
-          duration: 0.8,
+          duration: 0.4,
           ease: "power2.out",
           stagger: delay,
           scrollTrigger: {
             trigger: element,
-            start: "top 80%",
-            end: "bottom 20%",
+            start: "top 85%",
+            end: "bottom 15%",
             toggleActions: "play none none reverse",
           },
         },
@@ -87,8 +87,8 @@ export const useGSAPStagger = (delay: number = 0.1) => {
   return ref;
 };
 
-export const useGSAPParallax = (speed: number = 0.5) => {
-  const ref = useRef<HTMLElement>(null);
+export const useGSAPParallax = (speed: number = 0.3) => {
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!ref.current) return;
@@ -97,13 +97,13 @@ export const useGSAPParallax = (speed: number = 0.5) => {
 
     const ctx = gsap.context(() => {
       gsap.to(element, {
-        yPercent: -50 * speed,
+        yPercent: -30 * speed,
         ease: "none",
         scrollTrigger: {
           trigger: element,
           start: "top bottom",
           end: "bottom top",
-          scrub: true,
+          scrub: 1,
         },
       });
     }, ref);
@@ -115,7 +115,7 @@ export const useGSAPParallax = (speed: number = 0.5) => {
 };
 
 export const useGSAPFloat = () => {
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!ref.current) return;
@@ -124,9 +124,9 @@ export const useGSAPFloat = () => {
 
     const ctx = gsap.context(() => {
       gsap.to(element, {
-        y: -10,
-        duration: 2,
-        ease: "power2.inOut",
+        y: -6,
+        duration: 1.2,
+        ease: "power1.inOut",
         yoyo: true,
         repeat: -1,
       });
@@ -138,8 +138,8 @@ export const useGSAPFloat = () => {
   return ref;
 };
 
-export const useGSAPRotate = (duration: number = 10) => {
-  const ref = useRef<HTMLElement>(null);
+export const useGSAPRotate = (duration: number = 8) => {
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!ref.current) return;
@@ -161,8 +161,46 @@ export const useGSAPRotate = (duration: number = 10) => {
   return ref;
 };
 
+export const useGSAPFormAnimation = () => {
+  const ref = useRef<HTMLFormElement>(null);
+
+  useEffect(() => {
+    if (!ref.current) return;
+
+    const element = ref.current;
+    const ctx = gsap.context(() => {
+      // Faster fade in from bottom animation
+      gsap.fromTo(
+        element,
+        {
+          opacity: 0,
+          y: 30,
+          scale: 0.98,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.5,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: element,
+            start: "top 90%",
+            end: "bottom 10%",
+            toggleActions: "play none none reverse",
+          },
+        },
+      );
+    }, ref);
+
+    return () => ctx.revert();
+  }, []);
+
+  return ref;
+};
+
 export const useGSAPHover = () => {
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!ref.current) return;
@@ -171,17 +209,17 @@ export const useGSAPHover = () => {
 
     const handleMouseEnter = () => {
       gsap.to(element, {
-        scale: 1.05,
-        duration: 0.3,
-        ease: "power2.out",
+        scale: 1.03,
+        duration: 0.15,
+        ease: "power1.out",
       });
     };
 
     const handleMouseLeave = () => {
       gsap.to(element, {
         scale: 1,
-        duration: 0.3,
-        ease: "power2.out",
+        duration: 0.15,
+        ease: "power1.out",
       });
     };
 

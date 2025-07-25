@@ -62,7 +62,7 @@ const timelineEvents: TimelineEvent[] = [
 const AttorneyProfile = () => {
   const [selectedEvent, setSelectedEvent] = useState<string | null>(null);
   const profileRef = useGSAPAnimation();
-  const timelineRef = useGSAPStagger(0.1);
+  const timelineRef = useGSAPStagger(0.05);
   const parallaxRef = useGSAPParallax(0.3);
 
   const getTypeIcon = (type: string) => {
@@ -192,6 +192,20 @@ const AttorneyProfile = () => {
                   ))}
                 </div>
               </div>
+
+              {/* Ready to Work Together Box */}
+              <div className="bg-navy-800 rounded-xl p-6 text-center">
+                <h4 className="font-clarika font-semibold text-lg text-white mb-3">
+                  Ready to Work Together?
+                </h4>
+                <p className="text-white/80 font-garamond mb-4">
+                  Experience the difference that federal prosecution experience
+                  makes in your defense.
+                </p>
+                <a href="/schedule-consultation" className="btn-primary">
+                  Schedule Consultation
+                </a>
+              </div>
             </div>
           </div>
 
@@ -289,19 +303,7 @@ const AttorneyProfile = () => {
               </div>
             </div>
 
-            {/* CTA */}
-            <div className="bg-navy-50 rounded-lg p-6 text-center">
-              <h4 className="font-clarika font-semibold text-lg text-navy-800 mb-3">
-                Ready to Work Together?
-              </h4>
-              <p className="text-gray-600 font-garamond mb-4">
-                Experience the difference that federal prosecution experience
-                makes in your defense.
-              </p>
-              <a href="#contact" className="btn-primary">
-                Schedule Consultation
-              </a>
-            </div>
+
           </div>
         </div>
       </div>

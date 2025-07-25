@@ -9,7 +9,7 @@ const ResultsPage = () => {
     <div className="min-h-screen bg-white">
       <Navigation />
 
-      <main className="pt-24">
+      <main className="pt-24 pb-16">
         {/* Hero Section */}
         <section className="bg-navy-900 text-white py-16">
           <div className="container-luxury text-center">
@@ -17,7 +17,7 @@ const ResultsPage = () => {
               Our Results & Testimonials
             </h1>
             <p className="text-luxury text-white/80 max-w-3xl mx-auto">
-              See the successful outcomes we've achieved for our clients and
+              See the successful outcomes we&apos;ve achieved for our clients and
               read what they have to say about our legal representation.
             </p>
           </div>

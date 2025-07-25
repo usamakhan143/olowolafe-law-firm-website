@@ -12,7 +12,7 @@ const HeroSection = () => {
   const [displayText, setDisplayText] = useState("");
   const [showCursor, setShowCursor] = useState(true);
   const heroRef = useGSAPAnimation();
-  const statsRef = useGSAPStagger(0.2);
+  const statsRef = useGSAPStagger(0.1);
   const floatRef1 = useGSAPFloat();
   const floatRef2 = useGSAPFloat();
   const floatRef3 = useGSAPFloat();
@@ -28,9 +28,9 @@ const HeroSection = () => {
         i++;
       } else {
         clearInterval(typeTimer);
-        setTimeout(() => setShowCursor(false), 2000);
+        setTimeout(() => setShowCursor(false), 1000);
       }
-    }, 80);
+    }, 50);
 
     return () => clearInterval(typeTimer);
   }, []);
@@ -40,29 +40,34 @@ const HeroSection = () => {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-16"
     >
-      {/* Video Background */}
+      {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <div className="w-full h-full bg-gradient-to-br from-navy-900 via-navy-800 to-navy-700">
-          {/* Animated Legal Pattern */}
-          <div className="absolute inset-0 legal-pattern opacity-20"></div>
+        <div
+          className="w-full h-full bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2F59fb5da5a9b342648db0a1edf457b3c1%2Fd6703d310d194cb98ce31e497116a021?format=webp&width=1920&quality=85')`
+          }}
+        >
+          {/* Elegant Overlay for Readability */}
+          <div className="absolute inset-0 bg-gradient-to-br from-navy-900/40 via-navy-800/35 to-navy-700/30"></div>
 
-          {/* Floating Elements */}
+          {/* Subtle Legal Pattern */}
+          <div className="absolute inset-0 legal-pattern opacity-10"></div>
+
+          {/* Floating Elements for Elegance */}
           <div
             ref={floatRef1}
-            className="absolute top-1/4 left-1/4 w-2 h-2 bg-gold-400 rounded-full opacity-60"
+            className="absolute top-1/4 left-1/4 w-3 h-3 bg-gold-400 rounded-full opacity-70"
           ></div>
           <div
             ref={floatRef2}
-            className="absolute top-3/4 right-1/4 w-3 h-3 bg-gold-300 rounded-full opacity-40"
+            className="absolute top-3/4 right-1/4 w-4 h-4 bg-gold-300 rounded-full opacity-50"
           ></div>
           <div
             ref={floatRef3}
-            className="absolute top-1/2 left-3/4 w-1 h-1 bg-gold-500 rounded-full opacity-70"
+            className="absolute top-1/2 left-3/4 w-2 h-2 bg-gold-500 rounded-full opacity-80"
           ></div>
         </div>
-
-        {/* Overlay */}
-        <div className="absolute inset-0 video-overlay"></div>
       </div>
 
       {/* Content */}
@@ -70,10 +75,19 @@ const HeroSection = () => {
         ref={heroRef}
         className="relative z-10 container-luxury text-center px-4"
       >
-        <div className="max-w-5xl mx-auto py-8">
+        <div className="max-w-6xl mx-auto py-12 lg:py-16">
+          {/* Professional Badge */}
+          <div
+            className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full mb-8 animate-fade-in-up border border-white/20"
+            style={{ animationDelay: "1s", animationFillMode: "both" }}
+          >
+            <span className="text-gold-400 mr-2">⚖️</span>
+            <span className="text-white/90 font-garamond text-lg">Experienced Legal Advocates</span>
+          </div>
+
           {/* Main Heading with Typewriter Effect */}
-          <div className="mb-8 lg:mb-12">
-            <h1 className="heading-primary text-white mb-4 min-h-[1.2em]">
+          <div className="mb-10 lg:mb-14">
+            <h1 className="heading-primary text-white mb-6 min-h-[1.2em] drop-shadow-lg">
               <span className="inline-block">
                 {displayText}
                 {showCursor && <span className="typewriter-cursor"></span>}
@@ -83,10 +97,10 @@ const HeroSection = () => {
 
           {/* Subheading */}
           <div
-            className="mb-8 lg:mb-12 animate-fade-in-up"
+            className="mb-10 lg:mb-14 animate-fade-in-up"
             style={{ animationDelay: "4.5s", animationFillMode: "both" }}
           >
-            <p className="text-luxury text-white/90 max-w-3xl mx-auto">
+            <p className="text-luxury text-white/95 max-w-4xl mx-auto leading-relaxed drop-shadow-sm">
               Regardless of your situation, our firm strives to understand the
               unique legal concerns and needs of each individual client. We
               deliver high quality legal advocacy that is specifically tailored
@@ -97,73 +111,82 @@ const HeroSection = () => {
           {/* Key Stats */}
           <div
             ref={statsRef}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12"
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14"
           >
-            <div className="text-center">
-              <div className="text-4xl lg:text-5xl font-bold gradient-text mb-2">
-                95%
-              </div>
-              <div className="text-white/80 font-garamond">
-                Case Success Rate
-              </div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl lg:text-5xl font-bold gradient-text mb-2">
-                15+
-              </div>
-              <div className="text-white/80 font-garamond">
-                Years Experience
+            <div className="text-center group">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-gold-400/50 transition-all duration-300 hover:transform hover:-translate-y-2">
+                <div className="text-5xl lg:text-6xl font-bold gradient-text mb-3 drop-shadow-lg">
+                  95%
+                </div>
+                <div className="text-white/90 font-garamond text-lg">
+                  Case Success Rate
+                </div>
               </div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl lg:text-5xl font-bold gradient-text mb-2">
-                500+
+            <div className="text-center group">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-gold-400/50 transition-all duration-300 hover:transform hover:-translate-y-2">
+                <div className="text-5xl lg:text-6xl font-bold gradient-text mb-3 drop-shadow-lg">
+                  15+
+                </div>
+                <div className="text-white/90 font-garamond text-lg">
+                  Years Experience
+                </div>
               </div>
-              <div className="text-white/80 font-garamond">Cases Won</div>
+            </div>
+            <div className="text-center group">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-gold-400/50 transition-all duration-300 hover:transform hover:-translate-y-2">
+                <div className="text-5xl lg:text-6xl font-bold gradient-text mb-3 drop-shadow-lg">
+                  500+
+                </div>
+                <div className="text-white/90 font-garamond text-lg">Cases Won</div>
+              </div>
             </div>
           </div>
 
           {/* CTA Buttons */}
           <div
-            className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up"
+            className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up"
             style={{ animationDelay: "5.5s", animationFillMode: "both" }}
           >
-            <a href="#contact" className="btn-primary text-lg px-10 py-5">
+            <a
+              href="/schedule-consultation"
+              className="btn-primary text-xl px-12 py-6 shadow-2xl hover:shadow-glow transform hover:-translate-y-1 hover:scale-105 transition-all duration-300"
+            >
               Get Free Consultation
             </a>
             <a
               href="tel:4029959554"
-              className="btn-secondary text-lg px-10 py-5 border-2 border-white/20 hover:border-gold-400"
+              className="inline-flex items-center justify-center px-12 py-6 bg-white/10 backdrop-blur-sm text-white font-semibold text-xl rounded-lg border-2 border-white/30 hover:border-gold-400 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1"
             >
-              Call (402) 995-9554
+              📞 Call (402) 995-9554
             </a>
           </div>
 
           {/* Trust Badges */}
           <div
-            className="mt-16 pt-8 border-t border-white/20 animate-fade-in-up"
+            className="mt-20 pt-10 border-t border-white/30 animate-fade-in-up"
             style={{ animationDelay: "6s", animationFillMode: "both" }}
           >
-            <div className="flex flex-wrap justify-center items-center gap-8 text-white/60">
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-gold-500 rounded-full flex items-center justify-center">
-                  <span className="text-white text-sm font-bold">✓</span>
+            <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-12">
+              <div className="flex items-center space-x-3 bg-white/10 backdrop-blur-sm px-6 py-4 rounded-full border border-white/20">
+                <div className="w-10 h-10 bg-gradient-to-r from-gold-500 to-gold-400 rounded-full flex items-center justify-center">
+                  <span className="text-white text-lg font-bold">✓</span>
                 </div>
-                <span className="font-garamond">Licensed in NE & IA</span>
+                <span className="font-garamond text-white/90 text-lg font-medium">Licensed in NE & IA</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-gold-500 rounded-full flex items-center justify-center">
-                  <span className="text-white text-sm font-bold">✓</span>
+              <div className="flex items-center space-x-3 bg-white/10 backdrop-blur-sm px-6 py-4 rounded-full border border-white/20">
+                <div className="w-10 h-10 bg-gradient-to-r from-gold-500 to-gold-400 rounded-full flex items-center justify-center">
+                  <span className="text-white text-lg font-bold">✓</span>
                 </div>
-                <span className="font-garamond">
+                <span className="font-garamond text-white/90 text-lg font-medium">
                   Former Federal Investigator
                 </span>
               </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-gold-500 rounded-full flex items-center justify-center">
-                  <span className="text-white text-sm font-bold">✓</span>
+              <div className="flex items-center space-x-3 bg-white/10 backdrop-blur-sm px-6 py-4 rounded-full border border-white/20">
+                <div className="w-10 h-10 bg-gradient-to-r from-gold-500 to-gold-400 rounded-full flex items-center justify-center">
+                  <span className="text-white text-lg font-bold">✓</span>
                 </div>
-                <span className="font-garamond">Trial Attorneys</span>
+                <span className="font-garamond text-white/90 text-lg font-medium">Trial Attorneys</span>
               </div>
             </div>
           </div>

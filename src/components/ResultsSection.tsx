@@ -235,7 +235,7 @@ const ResultsSection = () => {
               for our clients.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#contact" className="btn-primary">
+              <a href="/schedule-consultation" className="btn-primary">
                 Schedule Free Consultation
               </a>
               <a href="tel:4029959554" className="btn-secondary">

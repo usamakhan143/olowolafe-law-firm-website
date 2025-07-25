@@ -11,6 +11,7 @@ const AboutOluwaseyi = () => {
   const profileRef = useGSAPAnimation();
   const educationRef = useGSAPStagger(0.1);
   const membershipsRef = useGSAPStagger(0.1);
+  const companyRef = useGSAPAnimation();
 
   const education = [
     {
@@ -45,70 +46,183 @@ const AboutOluwaseyi = () => {
       <Navigation />
 
       <main className="pt-24 pb-16">
-        <div className="container-luxury">
-          {/* Hero Section */}
-          <div ref={profileRef} className="text-center mb-16">
-            <h1 className="heading-primary text-navy-800 mb-4">
-              MEET OLUSEYI "SEYI" OLOWOLAFE
-            </h1>
-            <h2 className="heading-secondary text-gold-600 mb-8">
-              Criminal & Civil Trial Attorney
-            </h2>
+        {/* Hero Section */}
+        <section className="bg-navy-900 text-white py-16">
+          <div className="container-luxury text-center">
+            <div ref={profileRef}>
+              <h1 className="heading-primary text-white mb-6">
+                About Olowolafe Law Firm
+              </h1>
+              <p className="text-luxury text-white/80 max-w-3xl mx-auto">
+                Experienced legal representation in criminal defense, civil
+                rights, and personal injury throughout Nebraska and Iowa. Former
+                federal investigator providing fierce advocacy.
+              </p>
+            </div>
           </div>
+        </section>
+        <div className="container-luxury">
+          {/* Company About Section */}
+          <section ref={companyRef} className="mb-20 pt-16">
+            <div className="max-w-4xl mx-auto">
+              <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                <div className="space-y-6">
+                  <h2 className="heading-secondary text-navy-800 mb-6">
+                    Our Firm
+                  </h2>
+                  <p className="text-luxury leading-relaxed">
+                    At Olowolafe Law Firm, our trial attorneys represent
+                    individuals in criminal defense, civil rights, and personal
+                    injury litigation throughout Nebraska and Iowa. Regardless
+                    of your situation, our firm strives to understand the unique
+                    legal concerns and the needs of each client.
+                  </p>
 
-          {/* Main Content */}
-          <div className="grid lg:grid-cols-2 gap-16 items-start mb-16">
-            {/* Left Column - Photo */}
-            <div className="space-y-8">
-              <div className="relative mx-auto max-w-lg">
-                <div className="aspect-[3/4] rounded-xl overflow-hidden shadow-luxury">
-                  <Image
-                    src="https://cdn.builder.io/api/v1/image/assets%2F59fb5da5a9b342648db0a1edf457b3c1%2F6f9d8a0561b94445af796d502cc89efa?format=webp&width=800"
-                    alt="Oluseyi 'Seyi' Olowolafe - Criminal & Civil Trial Attorney"
-                    width={800}
-                    height={1067}
-                    className="w-full h-full object-cover"
-                    priority
-                  />
+                  <p className="text-luxury leading-relaxed">
+                    We provide high-quality legal advocacy that is specifically
+                    tailored to the unique concerns of each of our clients. We
+                    pride ourselves on having strong relationships with each of
+                    our clients through open communication and carefully
+                    understanding the legal problems our clients face.
+                  </p>
                 </div>
 
-                {/* Decorative Elements */}
-                <div className="absolute -top-4 -right-4 w-8 h-8 bg-gold-400 rounded-full opacity-80"></div>
-                <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gold-300 rounded-full opacity-60"></div>
+                <div className="space-y-8">
+                  <div className="bg-gold-50 rounded-xl p-8 border border-gold-200">
+                    <h3 className="heading-tertiary text-navy-800 mb-4">
+                      Our Commitment
+                    </h3>
+                    <ul className="space-y-3">
+                      <li className="flex items-start">
+                        <div className="w-6 h-6 bg-gold-500 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                          <span className="text-white text-sm">✓</span>
+                        </div>
+                        <span className="text-navy-700">
+                          Personalized legal strategies
+                        </span>
+                      </li>
+                      <li className="flex items-start">
+                        <div className="w-6 h-6 bg-gold-500 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                          <span className="text-white text-sm">✓</span>
+                        </div>
+                        <span className="text-navy-700">Open communication</span>
+                      </li>
+                      <li className="flex items-start">
+                        <div className="w-6 h-6 bg-gold-500 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                          <span className="text-white text-sm">✓</span>
+                        </div>
+                        <span className="text-navy-700">
+                          Trial-ready representation
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="card-luxury">
+                    <h3 className="heading-tertiary text-navy-800 mb-4">
+                      Our Approach
+                    </h3>
+                    <p className="text-gray-700 leading-relaxed">
+                      Our clients receive straightforward legal advice to help
+                      them make an informed decision when navigating the legal
+                      process. Our team presents all of the legal options without
+                      the complicated legal jargon.
+                    </p>
+                  </div>
+
+                  <div className="card-luxury">
+                    <h3 className="heading-tertiary text-navy-800 mb-4">
+                      Trial Experience
+                    </h3>
+                    <p className="text-gray-700 leading-relaxed">
+                      Our trial attorneys are comfortable appearing before juries,
+                      judges, administrative hearing officers, as well as state
+                      and federal appellate courts in Nebraska and Iowa.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-navy-50 rounded-xl p-8 mt-12 text-center">
+                <p className="text-luxury text-navy-800 mb-6">
+                  Our firm strives to solve our client&apos;s legal problems
+                  favorably, efficiently, and cost-effectively. Where a
+                  client&apos;s legal problems are unable to be resolved short
+                  of litigation, we are fully prepared and equipped to proceed
+                  to a trial.
+                </p>
+                <p className="text-navy-700 font-semibold">
+                  To discuss your legal problem, contact us today.
+                </p>
               </div>
             </div>
+          </section>
 
-            {/* Right Column - Content */}
-            <div className="space-y-8">
-              <div className="prose prose-lg">
-                <p className="text-luxury leading-relaxed">
-                  After serving as a former Federal Investigator, Mr. Olowolafe
-                  now serves as a trial attorney at Olowolafe Law Firm, LLC,
-                  experienced in both criminal and civil matters. Mr. Olowolafe
-                  passionately defends individuals under investigation or who
-                  have been charged with a state federal felony or misdemeanor
-                  throughout Nebraska and Iowa.
-                </p>
+          {/* Attorney Profile Section */}
+          <section className="mb-16">
+            <div className="text-center mb-12">
+              <h2 className="heading-secondary text-navy-800 mb-4">
+                MEET OLUSEYI &quot;SEYI&quot; OLOWOLAFE
+              </h2>
+              <h3 className="heading-tertiary text-gold-600 mb-6">
+                Criminal & Civil Trial Attorney
+              </h3>
+              <div className="w-24 h-1 bg-gold-500 mx-auto"></div>
+            </div>
 
-                <p className="text-luxury leading-relaxed">
-                  Mr. Olowolafe also represents individuals who have serious
-                  civil rights and personal injury claims. Mr. Olowolafe
-                  continually strives to give back to his community as a Board
-                  Member for the Midlands African Chamber, Greater Omaha SCORE
-                  Chapter volunteer mentor, Board Member for Nebraska Legal Aid,
-                  and a volunteer attorney for the Iowa Legal Aid COVID-19 Legal
-                  Advice Hotline.
-                </p>
+            {/* Main Content */}
+            <div className="grid lg:grid-cols-2 gap-16 items-start mb-16">
+              {/* Left Column - Photo */}
+              <div className="space-y-8">
+                <div className="relative mx-auto max-w-lg">
+                  <div className="aspect-[3/4] rounded-xl overflow-hidden shadow-luxury">
+                    <Image
+                      src="https://cdn.builder.io/api/v1/image/assets%2F59fb5da5a9b342648db0a1edf457b3c1%2F6f9d8a0561b94445af796d502cc89efa?format=webp&width=800"
+                      alt="Oluseyi 'Seyi' Olowolafe - Criminal & Civil Trial Attorney"
+                      width={800}
+                      height={1067}
+                      className="w-full h-full object-cover"
+                      priority
+                    />
+                  </div>
+
+                  {/* Decorative Elements */}
+                  <div className="absolute -top-4 -right-4 w-8 h-8 bg-gold-400 rounded-full opacity-80"></div>
+                  <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gold-300 rounded-full opacity-60"></div>
+                </div>
+
+
+
+
               </div>
 
-              {/* CTA Button */}
-              <div className="pt-6">
-                <a href="#contact" className="btn-primary text-lg px-10 py-4">
-                  Schedule Consultation
-                </a>
+              {/* Right Column - Content */}
+              <div className="space-y-8">
+                <div className="prose prose-lg">
+                  <p className="text-luxury leading-relaxed">
+                    After serving as a former Federal Investigator, Mr.
+                    Olowolafe now serves as a trial attorney at Olowolafe Law
+                    Firm, LLC, experienced in both criminal and civil matters.
+                    Mr. Olowolafe passionately defends individuals under
+                    investigation or who have been charged with a state federal
+                    felony or misdemeanor throughout Nebraska and Iowa.
+                  </p>
+
+                  <p className="text-luxury leading-relaxed">
+                    Mr. Olowolafe also represents individuals who have serious
+                    civil rights and personal injury claims. Mr. Olowolafe
+                    continually strives to give back to his community as a Board
+                    Member for the Midlands African Chamber, Greater Omaha SCORE
+                    Chapter volunteer mentor, Board Member for Nebraska Legal
+                    Aid, and a volunteer attorney for the Iowa Legal Aid
+                    COVID-19 Legal Advice Hotline.
+                  </p>
+                </div>
+
+
               </div>
             </div>
-          </div>
+          </section>
 
           {/* Qualifications Section */}
           <div className="bg-marble-50 rounded-xl p-8 lg:p-12">
@@ -140,6 +254,8 @@ const AboutOluwaseyi = () => {
                     </div>
                   ))}
                 </div>
+
+
               </div>
 
               {/* Bar Admissions */}
@@ -196,30 +312,7 @@ const AboutOluwaseyi = () => {
             </div>
           </div>
 
-          {/* Call to Action */}
-          <div className="text-center mt-16">
-            <div className="bg-navy-800 rounded-xl p-8 lg:p-12">
-              <h3 className="heading-tertiary text-white mb-4">
-                Ready to Work with Experienced Legal Counsel?
-              </h3>
-              <p className="text-luxury text-white/80 mb-8 max-w-2xl mx-auto">
-                Contact Olowolafe Law Firm today to discuss your legal matter
-                and learn how our experience can help you achieve the best
-                possible outcome.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#contact" className="btn-primary">
-                  Schedule Free Consultation
-                </a>
-                <a
-                  href="tel:4029959554"
-                  className="btn-secondary border-2 border-white/20 hover:border-gold-400"
-                >
-                  Call (402) 995-9554
-                </a>
-              </div>
-            </div>
-          </div>
+
         </div>
       </main>
 

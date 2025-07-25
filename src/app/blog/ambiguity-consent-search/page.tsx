@@ -50,9 +50,9 @@ const BlogPost = () => {
               {/* Content */}
               <div className="prose prose-lg max-w-none">
                 <p className="text-luxury leading-relaxed mb-6">
-                  Affirming a district court's convictions for possession of
+                  Affirming a district court&apos;s convictions for possession of
                   methamphetamine and drug paraphernalia, the Nebraska Supreme
-                  Court held the defendant's consent to a search was neither a
+                  Court held the defendant&apos;s consent to a search was neither a
                   result of coercion nor ambiguity. State v. Hammond, 315 Neb.
                   362 (Oct. 20, 2023).
                 </p>
@@ -72,10 +72,10 @@ const BlogPost = () => {
 
                 <p className="text-luxury leading-relaxed mb-6">
                   When the Defendant was asked whether she would mind if law
-                  enforcement looked in her vehicle, she replied, "If you
-                  absolutely need to…" Law enforcement officers asked a second
-                  time to "take a look," and the Defendant replied, "If you
-                  really need to go look, more power to you." Additionally,
+                  enforcement looked in her vehicle, she replied, &ldquo;If you
+                  absolutely need to&hellip;&rdquo; Law enforcement officers asked a second
+                  time to &ldquo;take a look,&rdquo; and the Defendant replied, &ldquo;If you
+                  really need to go look, more power to you.&rdquo; Additionally,
                   while law enforcement officers were preparing to search the
                   vehicle, the Defendant asked if they would retrieve her
                   cigarettes from the vehicle. After receiving her cigarettes,
@@ -92,7 +92,7 @@ const BlogPost = () => {
                   Defendant was ultimately charged with possession of
                   methamphetamine and drug paraphernalia. The district court
                   found the Defendant guilty following a bench trial and
-                  sentenced the Defendant to 36 months' probation. Upon
+                  sentenced the Defendant to 36 months&apos; probation. Upon
                   appealing her conviction to the appellate Court, the Nebraska
                   Supreme Court upheld the conviction.
                 </p>
@@ -109,7 +109,7 @@ const BlogPost = () => {
                   the Defendant had made a hand gesture toward the vehicle,
                   stood nearby, and had a conversation on her cell phone without
                   doing anything to manifest refusal. Therefore, the Court
-                  concluded the Defendant's consent was voluntary through her
+                  concluded the Defendant&apos;s consent was voluntary through her
                   statements and actions.
                 </p>
 
@@ -146,7 +146,7 @@ const BlogPost = () => {
                   rights and provide guidance on search and seizure matters.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/contact" className="btn-primary">
+                  <Link href="/schedule-consultation" className="btn-primary">
                     Schedule Consultation
                   </Link>
                   <a href="tel:4029959554" className="btn-secondary">

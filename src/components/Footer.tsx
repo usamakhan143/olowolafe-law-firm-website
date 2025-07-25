@@ -3,7 +3,11 @@
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  const practiceAreas = ["Criminal Defense", "Civil Rights", "Personal Injury"];
+  const practiceAreas = [
+    { name: "Criminal Defense", href: "/criminal-defense" },
+    { name: "Civil Rights", href: "/civil-rights" },
+    { name: "Personal Injury", href: "/personal-injury" }
+  ];
 
   const quickLinks = [
     { label: "About", href: "/about" },
@@ -24,9 +28,10 @@ const Footer = () => {
             <div className="flex items-center space-x-4 mb-6">
               <div className="w-16 h-16">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F59fb5da5a9b342648db0a1edf457b3c1%2Fa9dee2ca9ed24cb0930308ba5a655b3e?format=webp&width=800"
+                  src="https://cdn.builder.io/api/v1/image/assets%2F59fb5da5a9b342648db0a1edf457b3c1%2Fa9dee2ca9ed24cb0930308ba5a655b3e?format=webp&width=200&quality=90"
                   alt="OLO Law Firm Logo"
                   className="w-full h-full object-contain"
+                  loading="lazy"
                 />
               </div>
               <div>
@@ -91,29 +96,10 @@ const Footer = () => {
               {practiceAreas.map((area, index) => (
                 <li key={index}>
                   <a
-                    href="#practice"
+                    href={area.href}
                     className="text-white/70 hover:text-gold-400 transition-colors font-garamond text-sm"
                   >
-                    {area}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-clarika font-semibold text-lg mb-6">
-              Quick Links
-            </h4>
-            <ul className="space-y-3">
-              {quickLinks.map((link, index) => (
-                <li key={index}>
-                  <a
-                    href={link.href}
-                    className="text-white/70 hover:text-gold-400 transition-colors font-garamond text-sm"
-                  >
-                    {link.label}
+                    {area.name}
                   </a>
                 </li>
               ))}
@@ -141,6 +127,25 @@ const Footer = () => {
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="font-clarika font-semibold text-lg mb-6">
+              Quick Links
+            </h4>
+            <ul className="space-y-3">
+              {quickLinks.map((link, index) => (
+                <li key={index}>
+                  <a
+                    href={link.href}
+                    className="text-white/70 hover:text-gold-400 transition-colors font-garamond text-sm"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

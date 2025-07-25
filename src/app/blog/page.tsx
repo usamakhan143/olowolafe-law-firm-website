@@ -141,7 +141,7 @@ const BlogPage = () => {
                   might apply to your situation.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/contact" className="btn-primary">
+                  <Link href="/schedule-consultation" className="btn-primary">
                     Schedule Consultation
                   </Link>
                   <a href="tel:4029959554" className="btn-secondary">

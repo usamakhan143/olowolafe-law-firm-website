@@ -50,7 +50,7 @@ const BlogPost = () => {
               {/* Content */}
               <div className="prose prose-lg max-w-none">
                 <p className="text-luxury leading-relaxed mb-6">
-                  Affirming the district court's conviction of an unlawful
+                  Affirming the district court&apos;s conviction of an unlawful
                   possession of a firearm by a prohibited person, the Eighth
                   Circuit Court of Appeals found there was sufficient evidence
                   to support the unlawful possession of a firearm, in violation
